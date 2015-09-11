@@ -2,12 +2,18 @@
 sudo apt-get update
 sudo apt-get dist-upgrade
 
+# reboot
+sudo reboot
+
 # Use kernel 3.13
 sudo apt-get install linux-image-generic-lts-trusty linux-headers-generic-lts-trusty
 sudo apt-get autoremove --purge linux-image-generic-lts-vivid linux-headers-generic-lts-vivid linux-image-`uname -r` linux-headers-`uname -r`
 
 # Install VirtualBox Guest Additions dependencies
 sudo apt-get install dkms xserver-xorg xserver-xorg-core
+
+# reboot
+sudo reboot
 
 # Install VirtualBox Guest Additions
 #   Devices -> Insert Guest Additions CD image
