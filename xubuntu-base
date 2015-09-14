@@ -1,9 +1,8 @@
+# install xubuntu 14.04.3
+
 # update system
 sudo apt-get update
 sudo apt-get dist-upgrade
-
-# reboot
-sudo reboot
 
 # Use kernel 3.13
 sudo apt-get install linux-image-generic-lts-trusty linux-headers-generic-lts-trusty
