@@ -1,4 +1,6 @@
 # install xubuntu 14.04.3
+# username : "user"
+# password : " " (space)
 
 # update system
 sudo apt-get update
@@ -49,5 +51,5 @@ sudo dd if=/dev/zero of=/zerofile
 sudo rm /zerofile
 
 # Shared folder settings
-sudo adduser student vboxsf
-sudo ln -s /media/sf_shared/ /home/student/Desktop/
+sudo adduser user vboxsf
+sudo ln -s /media/sf_shared/ /home/user/Desktop/
