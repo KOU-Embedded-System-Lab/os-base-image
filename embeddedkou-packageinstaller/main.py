@@ -1,6 +1,22 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import os.path
+
+# Copyright (C) 2015 Ata Niyazov <ata.niazov@gmail.com> & Taner Guven <tanerguven@gmail.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import os
 import subprocess
 import Tkinter as tk
 import tkMessageBox
@@ -10,14 +26,6 @@ PROGRAMS = [
     ("Programlanabilir Yapilar", "tkgate-kou"),
     ("Ubuntu Software Center", "software-center"),
 ]
-
-def run(cmd):
-    p = subprocess.Popen(cmd, shell=True)
-    p.communicate()
-    r = p.wait()
-    if r:
-        return False
-    return True
 
 
 def get_installed_programs():
@@ -34,12 +42,11 @@ def configure(install_package_list, remove_package_list):
     install_package_list = " ".join(install_package_list)
     remove_package_list = " ".join(remove_package_list)
 
-    cmd = "xfce4-terminal -e 'bash -c \"apt-get -y update && apt-get -y install %s && apt-get -y autoremove --purge %s\"'" % (
+    cmd = "xterm -e 'bash -c \"apt-get -y update && apt-get -y install %s && apt-get -y autoremove --purge %s\"'" % (
         install_package_list, remove_package_list
     )
 
     print cmd
-    import os
     os.execl("/usr/bin/gksudo", "gksudo", cmd)
 
 

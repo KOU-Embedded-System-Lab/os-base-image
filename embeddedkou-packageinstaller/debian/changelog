@@ -1,0 +1,5 @@
+embeddedkou-packageinstaller (20150916.0011-1) trusty; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Taner Guven <tanerguven@gmail.com>  Tue, 15 Sep 2015 21:18:51 +0000
