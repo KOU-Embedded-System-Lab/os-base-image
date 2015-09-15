@@ -37,7 +37,7 @@ sudo apt-get autoremove --purge apt-xapian-index g++-4.8 xfce4-appfinder printer
 sudo apt-get install secure-delete
 
 # Clean apt cache
-sudo apt-get autoremove
+sudo apt-get autoremove --purge
 sudo apt-get clean
 sudo rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/cache/apt-xapian-index/ ; 
 
