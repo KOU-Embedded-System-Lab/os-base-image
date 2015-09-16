@@ -1,3 +1,9 @@
+kouembedded-packageinstaller (1.0-2) trusty; urgency=medium
+
+  * package name changed && updates
+
+ -- Taner Guven <tanerguven@gmail.com>  Wed, 16 Sep 2015 11:34:44 +0000
+
 embeddedkou-packageinstaller (20150916.0011-1) trusty; urgency=low
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>

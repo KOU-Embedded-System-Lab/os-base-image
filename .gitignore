@@ -1,2 +1,12 @@
 *~
 *.pyc
+*.dsc
+*.build
+*.changes
+*.tar.*
+*.tar
+*.deb
+#/*/debian/*/*
+#/*/debian/files
+#/*/debian/*.log
+#/*/debian/*.substvars

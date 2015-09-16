@@ -1,4 +1,4 @@
-Source: embeddedkou-packageinstaller
+Source: kouembedded-packageinstaller
 Section: admin
 Priority: optional
 Maintainer: Taner Guven <tanerguven@gmail.com>
@@ -8,8 +8,8 @@ Homepage: https://github.com/KOU-Embedded-System-Lab/os-base-image
 #Vcs-Git: git://git.debian.org/collab-maint/embeddedkou-packageinstaller.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/embeddedkou-packageinstaller.git;a=summary
 
-Package: embeddedkou-packageinstaller
-Architecture: any
+Package: kouembedded-packageinstaller
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, python-tk, xterm, gksu
 Description: Custom GUI package installer for minimal OS images
- <insert long description, indented with spaces>
+ Custom GUI package installer for minimal OS images

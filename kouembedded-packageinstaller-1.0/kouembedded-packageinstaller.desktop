@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=KOU Paket Yukleyici
+GenericName=KOU Paket Yukleyici
+Exec=kouembedded-packageinstaller
+Icon=software-properties
+Terminal=false
+Type=Application
+Categories=PackageManager;GTK;System;Settings
