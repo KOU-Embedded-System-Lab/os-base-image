@@ -55,6 +55,12 @@ def configure(install_package_list, remove_package_list):
     os.execl("/usr/bin/gksudo", "gksudo", cmd)
 
 
+def system_update():
+    cmd = "xterm -e 'bash -c \"apt-get -y update && apt-get -y dist-upgrade \"'"
+    print cmd
+    os.execl("/usr/bin/gksudo", "gksudo", cmd)
+
+
 class GUI(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
@@ -74,6 +80,13 @@ class GUI(tk.Tk):
 
         self.submitButton = tk.Button(self, text="Kaydet", command=self.query_checkbuttons)
         self.submitButton.pack()
+
+        self.updateButton = tk.Button(self, text="Sistemi Guncelle", command=self.updateButton_clicked)
+        self.updateButton.pack()
+
+
+    def updateButton_clicked(self):
+        system_update()
 
 
     def query_checkbuttons(self):

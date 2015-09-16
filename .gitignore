@@ -6,6 +6,7 @@
 *.tar.*
 *.tar
 *.deb
+*.upload
 #/*/debian/*/*
 #/*/debian/files
 #/*/debian/*.log
