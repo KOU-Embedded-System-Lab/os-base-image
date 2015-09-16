@@ -20,19 +20,24 @@ import os
 import subprocess
 import Tkinter as tk
 import tkMessageBox
+import apt
 
 PROGRAMS = [
-    ("Programlama", "codeblocks"),
-    ("Programlanabilir Yapilar", "tkgate-kou"),
+    ("Programlama Dersi Programlari", "kouembedded-programming-course"),
+    ("Programlanabilir Yapilar Dersi Programlari", "kouembedded-programmablestructures-course"),
+    ("Web Browser (Firefox)", "firefox"),
     ("Ubuntu Software Center", "software-center"),
 ]
 
 
 def get_installed_programs():
+    apt_cache = apt.Cache()
     installed = set()
     uninstalled = set()
     for package_title, package_name in PROGRAMS:
-        if os.path.isfile("/var/lib/dpkg/info/%s.list" % package_name):
+        if package_name not in apt_cache:
+            print "WARNING: package not found: %s" % package_name
+        elif apt_cache[package_name].is_installed:
             installed.add(package_name)
         else:
             uninstalled.add(package_name)
@@ -56,9 +61,10 @@ class GUI(tk.Tk):
 
         self.program_list = []
 
+        installed_packages, uninstalled_packages = get_installed_programs()
         for package_title, package_name in PROGRAMS:
             v = tk.StringVar()
-            if os.path.isfile("/var/lib/dpkg/info/%s.list" % package_name):
+            if package_name in installed_packages:
                 v.set(package_name)
             else:
                 v.set("")
@@ -69,8 +75,6 @@ class GUI(tk.Tk):
         self.submitButton = tk.Button(self, text="Kaydet", command=self.query_checkbuttons)
         self.submitButton.pack()
 
-
-        # self.tb_info.setText("asdda")
 
     def query_checkbuttons(self):
 
