@@ -61,7 +61,7 @@ sudo adduser user vboxsf
 # kouembedded-installer
 sudo add-apt-repository ppa:tanerguven/kou
 sudo apt-get update
-sudo apt-get install kouembedded-package-installer
+sudo apt-get install kouembedded-packageinstaller
 
 # Install sfill
 sudo apt-get install secure-delete
