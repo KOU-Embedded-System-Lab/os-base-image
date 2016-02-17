@@ -71,6 +71,10 @@ sudo apt-get autoremove --purge
 sudo apt-get clean
 sudo rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/cache/apt-xapian-index/ ;
 
+# clean old log & backup files
+sudo find /var/log/ -name "*.gz" -o -name "*.old" -exec rm -f "{}" \; ;
+sudo find /var/backups/ -name "*.gz" -exec rm -f "{}" \; ;
+
 # fill disk with zero
 sudo dd if=/dev/zero of=/zerofile
 sudo rm -f /zerofile
