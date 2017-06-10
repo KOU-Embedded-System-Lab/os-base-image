@@ -1,14 +1,8 @@
 # KOU Embedded VirtualBox image creation
 
-## Download **xubuntu 16.04.2 32-bit**
-
-http://torrent.ubuntu.com/xubuntu/releases/xenial/release/desktop/xubuntu-16.04.2-desktop-i386.iso.torrent
-
-## Download and install VirtualBox 5.1.22
-https://www.virtualbox.org/wiki/Downloads
-
-## Download and install VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack
-https://www.virtualbox.org/wiki/Downloads
+* [Download **xubuntu 16.04.2 32-bit**](http://torrent.ubuntu.com/xubuntu/releases/xenial/release/desktop/xubuntu-16.04.2-desktop-i386.iso.torrent)
+* [Download and install **VirtualBox 5.1.22**](https://www.virtualbox.org/wiki/Downloads)
+* [Download and install **VirtualBox 5.1.22 Oracle VM VirtualBox Extension Pack**](https://www.virtualbox.org/wiki/Downloads)
 
 ## Create Virtual Machine
 
