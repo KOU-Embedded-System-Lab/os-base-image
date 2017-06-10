@@ -21,7 +21,7 @@ File location and size: 10.00 GB
 ```
 
 ### Settings
-#### General -> Advanced:
+#### General >> Advanced:
 
 ```
 Shared Clipboard: Bidirectional
@@ -30,7 +30,7 @@ Drag'n'Drop: Bidirectional
 Description:
 ```
 
-#### Display -> Screen
+#### Display >> Screen
 
 ```
 Video Memory: 64 MB or 128 MB
