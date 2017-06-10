@@ -31,9 +31,13 @@ Description:
 ```
 
 #### Display -> Screen
+
+```
 Video Memory: 64 MB or 128 MB
+```
 
 #### Audio
+
+```
 Disable Audio (just uncheck the box with **Enable Audio**)
-
-
+```
