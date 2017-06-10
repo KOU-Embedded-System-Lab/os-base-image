@@ -6,6 +6,7 @@
 
 ## Create Virtual Machine
 
+```
 Name: kou-embedded-image
 Type: Linux
 Version: Ubuntu (32-bit)
@@ -17,14 +18,17 @@ Hard disk: Create a virtual hard disk now
 Hard disk file type: VDI (VirtualBox Disk image)
 Storage on physical hard disk: Dynamically allocated
 File location and size: 10.00 GB
+```
 
 ### Settings
 #### General -> Advanced:
+
+```
 Shared Clipboard: Bidirectional
 Drag'n'Drop: Bidirectional
 
 Description:
-
+```
 
 #### Display -> Screen
 Video Memory: 64 MB or 128 MB
