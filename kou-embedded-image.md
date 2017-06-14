@@ -117,6 +117,11 @@ Press -> "Enter"
 Bu dosyayi sanal makineye indir (kopyala/yapistir icin)
 
 ```
-wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/xubuntu-base
+wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/kou-embedded-image.md
 ```
 
+```
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+```
