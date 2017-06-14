@@ -44,6 +44,8 @@ Disable Audio (just uncheck the box with **Enable Audio**)
 
 ## Install Xubuntu
 
+```
 username: kou
 hostname: kou-embedded
 password: ' ' (space)
+```
