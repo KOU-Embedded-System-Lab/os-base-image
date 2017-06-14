@@ -61,15 +61,13 @@ Press -> "Xubuntu'yu Kur"
 ### "Xubuntu kurulumu için hazırlanılıyor"
 
 ```
-Check the box with:
-"Download updates while installing Xubuntu. This saves time after installation."
+Check the box with: "Download updates while installing Xubuntu. This saves time after installation."
 ```
 
 ### "Kurulum türü":
 
 ```
-Check the box with:
-"Diski sil ve Xubuntu yükle"
+Check the box with: "Diski sil ve Xubuntu yükle"
 
 Press -> "Şimdi Yükle"
 
@@ -100,7 +98,8 @@ Press -> "Devam Et"
 "Bir parola seçin: ' ' (boşluk)"
 "Parolanızı doğrulayın: ' ' (boşluk)"
 
-Check the box with:
-"Otomatik giriş yap"
+Check the box with: "Otomatik giriş yap"
+
+Press -> "Devam Et"
 ```
 
