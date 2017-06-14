@@ -114,7 +114,7 @@ Press -> "Enter"
 
 ## Configuration:
 
-Bu dosyayi sanal makineye indir (kopyala/yapistir icin)
+Download this file to virtual machine to copy/paste instruction steps:
 
 ```
 wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/kou-embedded-image.md
@@ -158,15 +158,17 @@ Güncelleştirmeler ->
 Press -> "Kapat" -> "Yenile"
 ```
 
+### Remove old kernels and headers:
+
 ```
-sudo apt-get autoremove --purge linux-image-generic-lts-vivid linux-headers-generic-lts-vivid linux-image-`uname -r` linux-headers-`uname -r`
+sudo apt-get autoremove --purge linux-image-generic-hwe-16.0 linux-headers-generic-lts-vivid linux-image-`uname -r` linux-headers-`uname -r`
 sudo reboot
 ```
 
 #### Remove programs
 
 ```
-sudo apt-get autoremove --purge abiword blueman xfce4-dict evince evince-common firefox gigolo gimp gmusicbrowser gnome-calculator gnumeric light-locker gnome-mines xfce4-notes onboard orage parole pidgin xfce4-power-manager system-config-printer-* xfce4-mailwatch-plugin xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-weather-plugin xfce4-verve-plugin xfce4-cpugraph-plugin xfce4-netload-plugin simple-scan gnome-sudoku thunderbird transmission-* xchat xfburn  avahi-daemon avahi-autoipd bluez bluez-cups cups chromium-codecs-ffmpeg-extra cups-bsd cups-client cups-common cups-filters cups-filters-core-drivers catfish ristretto gucharmap xubuntu-community-wallpapers
+sudo apt remove --autoremove --purge abiword blueman xfce4-dict evince evince-common firefox gigolo gimp gmusicbrowser gnome-calculator gnumeric light-locker gnome-mines xfce4-notes onboard orage parole pidgin xfce4-power-manager system-config-printer-* xfce4-mailwatch-plugin xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-weather-plugin xfce4-verve-plugin xfce4-cpugraph-plugin xfce4-netload-plugin simple-scan gnome-sudoku thunderbird transmission-* xchat xfburn  avahi-daemon avahi-autoipd bluez bluez-cups cups chromium-codecs-ffmpeg-extra cups-bsd cups-client cups-common cups-filters cups-filters-core-drivers catfish ristretto gucharmap xubuntu-community-wallpapers
 ```
 
 #### Remove them carefully:
