@@ -107,4 +107,7 @@ Press -> "Devam Et"
 
 ```
 Press -> "Şimdi Yeniden Başlat"
+
+Please remove the installation medium, then press ENTER:
+Press -> "Enter"
 ```
