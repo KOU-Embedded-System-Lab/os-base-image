@@ -112,7 +112,7 @@ Please remove the installation medium, then press ENTER:
 Press -> "Enter"
 ```
 
-### Configuration:
+## Configuration:
 
 Bu dosyayi sanal makineye indir (kopyala/yapistir icin)
 
@@ -120,8 +120,19 @@ Bu dosyayi sanal makineye indir (kopyala/yapistir icin)
 wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/kou-embedded-image.md
 ```
 
+### Update & Upgrade 
+
 ```
 sudo apt update
 sudo apt upgrade
 sudo apt dist-upgrade
+
+reboot
+
+sudo apt autoremove
+sudo apt autoclean
+sudo apt clean
+sudo apt update
+
 ```
+
