@@ -154,7 +154,8 @@ Güncelleştirmeler ->
   Diğer güncellemeler olduğunda: Her iki haftada bir göster
   
   Beni, yeni bir Ubuntu sürümü olunca bilgilendir: Hiçbir zaman
-
+  
+Press -> "Kapat" -> "Yenile"
 ```
 
 ```
