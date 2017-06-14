@@ -160,7 +160,7 @@ sudo apt update
 poweroff
 ```
 
-**Please take a snapshot or clone your virtual machine before continue. Instruction steps below may damage your image**
+**Please take a snapshot or clone your virtual machine before continue. Instruction steps below may damage your image.**
 
 ### Remove old kernels and headers:
 
@@ -179,7 +179,9 @@ linux-image-`uname -r` linux-headers-`uname -r` linux-image-extra-`uname -r`
 sudo apt remove --autoremove --purge abiword blueman xfce4-dict evince evince-common firefox gigolo gimp gmusicbrowser gnome-calculator gnumeric light-locker gnome-mines xfce4-notes onboard orage parole pidgin xfce4-power-manager system-config-printer-* xfce4-mailwatch-plugin xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-weather-plugin xfce4-verve-plugin xfce4-cpugraph-plugin xfce4-netload-plugin simple-scan gnome-sudoku thunderbird transmission-* xchat xfburn  avahi-daemon avahi-autoipd bluez bluez-cups cups chromium-codecs-ffmpeg-extra cups-bsd cups-client cups-common cups-filters cups-filters-core-drivers catfish ristretto gucharmap xubuntu-community-wallpapers
 ```
 
-alsa-base alsa-utils apparmor apport apport-gtk apport-symptoms 
+```
+sudo apt remove --autoremove --purge alsa-base alsa-utils apparmor apport apport-gtk apport-symptoms aspell aspell-en avahi-autoipd avahi-daemon avahi-utils blueman bluez bluez-cups bluez-obexd brltty brltty-x11 catfish cheese-common colord colord-data 
+```
 
 #### Remove them carefully:
 
