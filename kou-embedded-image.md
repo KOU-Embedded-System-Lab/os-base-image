@@ -137,10 +137,30 @@ reboot
 
 sudo apt update
 ```
-### /etc/apt/sources.list
 
+#### Yazılım ve Güncelleştirmeler:
+
+```
+Ubuntu Yazılımı ->
+  İndirme adresi: Almanya sunucusu (de.archive.ubuntu.com or de2.archive.ubuntu.com)
+
+Diğer Yazılımlar ->
+  Tick - "Canonical Ortakları"
+  Tick - "Canonical Ortakları (Kaynak Kodu)"
+
+Güncelleştirmeler ->
+  Güncellemeleri otomatik olarak kontrol et: Hiçbir zaman
+  Güvenlik güncellemeleri olduğunda: O an göster
+  Diğer güncellemeler olduğunda: Her iki haftada bir göster
+  
+  Beni, yeni bir Ubuntu sürümü olunca bilgilendir: Hiçbir zaman
+
+```
+
+```
 sudo apt-get autoremove --purge linux-image-generic-lts-vivid linux-headers-generic-lts-vivid linux-image-`uname -r` linux-headers-`uname -r`
 sudo reboot
+```
 
 #### Remove programs
 
