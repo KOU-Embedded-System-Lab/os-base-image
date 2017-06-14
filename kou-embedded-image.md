@@ -41,3 +41,9 @@ Video Memory: 64 MB or 128 MB
 ```
 Disable Audio (just uncheck the box with **Enable Audio**)
 ```
+
+## Install Xubuntu
+
+username: kou
+hostname: kou-embedded
+password: ' ' (space)
