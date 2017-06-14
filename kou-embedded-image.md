@@ -120,24 +120,6 @@ Download this file to virtual machine to copy/paste instruction steps:
 wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/kou-embedded-image.md
 ```
 
-### Update & Upgrade 
-
-```
-sudo apt update
-sudo apt upgrade
-sudo apt dist-upgrade
-
-reboot
-
-sudo apt autoremove
-sudo apt autoclean
-sudo apt clean
-
-reboot
-
-sudo apt update
-```
-
 #### Yazılım ve Güncelleştirmeler:
 
 ```
@@ -157,6 +139,28 @@ Güncelleştirmeler ->
   
 Press -> "Kapat" -> "Yenile"
 ```
+
+### Update & Upgrade 
+
+```
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+
+reboot
+
+sudo apt autoremove
+sudo apt autoclean
+sudo apt clean
+
+reboot
+
+sudo apt update
+
+poweroff
+```
+
+**Please take a snapshot or clone your virtual machine before continue. Instruction steps below may damage your image**
 
 ### Remove old kernels and headers:
 
