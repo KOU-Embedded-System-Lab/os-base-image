@@ -28,9 +28,16 @@ Shared Clipboard: Bidirectional
 Drag'n'Drop: Bidirectional
 
 Description:
+
 ```
 
-#### Display >> Screen
+### System >> Motherboard:
+
+```
+Disable Floppy (just uncheck the box with **Floppy**)
+```
+
+#### Display >> Screen:
 
 ```
 Video Memory: 64 MB or 128 MB
