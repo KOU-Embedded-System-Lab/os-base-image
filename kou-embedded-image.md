@@ -132,7 +132,25 @@ reboot
 sudo apt autoremove
 sudo apt autoclean
 sudo apt clean
-sudo apt update
 
+reboot
+
+sudo apt update
+```
+### /etc/apt/sources.list
+
+sudo apt-get autoremove --purge linux-image-generic-lts-vivid linux-headers-generic-lts-vivid linux-image-`uname -r` linux-headers-`uname -r`
+sudo reboot
+
+#### Remove programs
+
+```
+sudo apt-get autoremove --purge abiword blueman xfce4-dict evince evince-common firefox gigolo gimp gmusicbrowser gnome-calculator gnumeric light-locker gnome-mines xfce4-notes onboard orage parole pidgin xfce4-power-manager system-config-printer-* xfce4-mailwatch-plugin xfce4-quicklauncher-plugin xfce4-screenshooter xfce4-weather-plugin xfce4-verve-plugin xfce4-cpugraph-plugin xfce4-netload-plugin simple-scan gnome-sudoku thunderbird transmission-* xchat xfburn  avahi-daemon avahi-autoipd bluez bluez-cups cups chromium-codecs-ffmpeg-extra cups-bsd cups-client cups-common cups-filters cups-filters-core-drivers catfish ristretto gucharmap xubuntu-community-wallpapers
+```
+
+#### Remove them carefully:
+
+```
+sudo apt-get autoremove --purge apt-xapian-index g++-4.8 xfce4-appfinder printer-driver-* gstreamer* accountsservice app-install-data-partner apport brltty espeak espeak-data gdisk genisoimage geoip-database lintian  dictionaries-common dmidecode dmz-cursor-theme firefox-locale-en firefox-locale-tr flashplugin-installer fonts-kacst fonts-kacst-one fonts-khmeros-core fonts-lao fonts-lklug-sinhala fonts-nanum fonts-sil-abyssinica fonts-sil-padauk fonts-takao-pgothic fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg* foomatic-db-compressed-ppds gimp-help-common gimp-help-en gnome-accessibility-themes hdparm language-pack-gnome-tr language-pack-gnome-tr-base language-pack-tr language-pack-tr-base libabiword-3.0 libaccountsservice0 libavcodec54 libavformat54 libavutil52 libbluetooth3 libbrlapi0.6 libburn4 libcamel-1.2 libc6-dbg libflac8 libflite1 memtest86+ modemmanager nautilus-data network-manager-pptp network-manager-pptp-gnome os-prober pidgin-otr oxideqt-codecs-extra poppler-data poppler-utils popularity-contest sane-utils ttf-punjabi-fonts ttf-indic-fonts-core toshset ubuntu-restricted-addons vim-common wamerican whoopsie xbrlapi xserver-xorg-video-cirrus xserver-xorg-video-intel xserver-xorg-video-mach64 xserver-xorg-video-mga xserver-xorg-video-neomagic xserver-xorg-video-nouveau xserver-xorg-video-openchrome xserver-xorg-video-qxl xserver-xorg-video-r128 xserver-xorg-video-s3 xserver-xorg-video-savage xserver-xorg-video-siliconmotion xserver-xorg-video-sis xserver-xorg-video-sisusb xserver-xorg-video-tdfx xserver-xorg-video-trident xserver-xorg-video-vesa xserver-xorg-video-vmware xubuntu-docs xubuntu-community-wallpapers humanity-icon-theme language-pack-gnome-en-base language-pack-gnome-en
 ```
 
