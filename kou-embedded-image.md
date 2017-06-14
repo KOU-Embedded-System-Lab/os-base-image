@@ -111,3 +111,12 @@ Press -> "Şimdi Yeniden Başlat"
 Please remove the installation medium, then press ENTER:
 Press -> "Enter"
 ```
+
+### Configuration:
+
+Bu dosyayi sanal makineye indir (kopyala/yapistir icin)
+
+```
+wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/xubuntu-base
+```
+
