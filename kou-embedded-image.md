@@ -51,8 +51,35 @@ Disable Audio (just uncheck the box with **Enable Audio**)
 
 ## Install Xubuntu
 
+### "Hoş Geldiniz":
+
+```
+Language: Türkçe
+Press -> "Xubuntu'yu Kur"
+```
+
+### "Xubuntu kurulumu için hazırlanılıyor"
+
+```
+Check the box with:
+"Download updates while installing Xubuntu. This saves time after installation."
+```
+
+### "Kurulum türü":
+
+```
+Check the box with:
+"Diski sil ve Xubuntu yükle"
+
+Press -> "Şimdi Yükle"
+
+On message "Değişiklikler diske kaydedilsin mi?":
+Press -> "Devam Et"
+```
+
 ```
 username: kou
 hostname: kou-embedded
 password: ' ' (space)
 ```
+
