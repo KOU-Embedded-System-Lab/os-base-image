@@ -103,3 +103,8 @@ Check the box with: "Otomatik giriş yap"
 Press -> "Devam Et"
 ```
 
+### "Kurulum Tamamlandı":
+
+```
+Press -> "Şimdi Yeniden Başlat"
+```
