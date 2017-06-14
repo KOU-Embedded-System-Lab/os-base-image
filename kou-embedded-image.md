@@ -77,9 +77,30 @@ On message "Değişiklikler diske kaydedilsin mi?":
 Press -> "Devam Et"
 ```
 
+### "Neredesiniz?":
+
 ```
-username: kou
-hostname: kou-embedded
-password: ' ' (space)
+Just write in a box below a map:
+Istanbul
+```
+
+### "Klavye düzeni":
+
+```
+"Klavye düzeninizi seçin: Türkçe Q Klavye -> Türkçe Q Klavye"
+Press -> "Devam Et"
+```
+
+### "Kimsiniz?":
+
+```
+"Adınız: kou"
+"Bilgisayarınızın adı: kou-embedded"
+"Bir kullanıcı adı seçin: kou"
+"Bir parola seçin: ' ' (boşluk)"
+"Parolanızı doğrulayın: ' ' (boşluk)"
+
+Check the box with:
+"Otomatik giriş yap"
 ```
 
