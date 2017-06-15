@@ -180,7 +180,7 @@ sudo apt remove --autoremove --purge abiword blueman xfce4-dict evince evince-co
 ```
 
 ```
-sudo apt remove --autoremove --purge alsa-base alsa-utils apparmor apport apport-gtk apport-symptoms aspell aspell-en avahi-autoipd avahi-daemon avahi-utils blueman bluez bluez-cups bluez-obexd brltty brltty-x11 catfish cheese-common colord colord-data cups cups-browsed cups-bsd cups-client cups-common cups-core-drivers cups-daemon cups-filters cups-filters-core-drivers cups-ppdc cups-server-common dc dictionaries-common dirmngr dmidecode efibootmgr enchant espeak espeak-data ethtool evince evince-common evolution-data-server-common 
+sudo apt remove --autoremove --purge alsa-base alsa-utils apparmor apport apport-gtk apport-symptoms aspell aspell-en avahi-autoipd avahi-daemon avahi-utils blueman bluez bluez-cups bluez-obexd brltty brltty-x11 catfish cheese-common colord colord-data cups cups-browsed cups-bsd cups-client cups-common cups-core-drivers cups-daemon cups-filters cups-filters-core-drivers cups-ppdc cups-server-common dc dictionaries-common dirmngr dmidecode efibootmgr enchant espeak espeak-data ethtool evince evince-common evolution-data-server-common firefox firefox-locale-en firefox-locale-tr fonts-guru fonts-guru-extra fonts-kacst fonts-kacst-one fonts-khmeros-core 
 ```
 
 #### Remove them carefully:
