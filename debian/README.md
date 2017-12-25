@@ -22,6 +22,9 @@ deb http://ftp.debian.org/debian stretch-backports main contrib non-free
 ```
 sudo apt install xfce4 xfce4-goodies
 sudo apt install linux-headers-amd64 linux-headers-4.9.0-4-amd64 gcc make
+sudo apt install default-jre
+sudo apt install gcc-arm-none-eabi gdb-arm-none-eabi
+sudo apt install openocd
 ```
 
 After you can install VirtualBox Additions from CD
@@ -32,7 +35,19 @@ After you can install VirtualBox Additions from CD
 greeter-hide-users-false
 ...
 #autologin-user=
-autologin-user=<USERNAME>
+autologin-user=<user>
 
 ```
 
+## Shared folders
+```
+sudo adduser <user> vboxsf
+sudo usermod -a -G vboxsf <user>
+
+```
+
+## GNU MCU Eclipse Plug-ins
+```
+name: GNU MCU Eclipse Plug-ins
+URL: http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/
+```
