@@ -33,7 +33,7 @@ Description:
 
 ```
 
-### System >> Motherboard:
+#### System >> Motherboard:
 
 ```
 Disable Floppy (just uncheck the box with **Floppy**)
