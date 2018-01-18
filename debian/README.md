@@ -22,6 +22,7 @@ File location and size: 10.00 GB
 ```
 
 ### Settings
+
 #### General >> Advanced:
 
 ```
