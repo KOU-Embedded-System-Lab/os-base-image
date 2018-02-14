@@ -1,5 +1,5 @@
 # KOU Embedded VirtualBox image creation
-Ata Niyazov 2018-01-18
+Ata Niyazov 2018-02-09
 
 * [Download **Debian 9**](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.3.0-amd64-netinst.iso)
 * [Download and install **VirtualBox 5.2.6**](https://www.virtualbox.org/wiki/Downloads)
@@ -18,7 +18,7 @@ Hard disk: Create a virtual hard disk now
 
 Hard disk file type: VDI (VirtualBox Disk image)
 Storage on physical hard disk: Dynamically allocated
-File location and size: 10.00 GB
+File location and size: 8.00 GB
 ```
 
 ### Settings
@@ -30,6 +30,13 @@ Shared Clipboard: Bidirectional
 Drag'n'Drop: Bidirectional
 
 Description:
+debian-kou-embedded-v$(date -I)
+
+Username: student
+Password: ' ' (space)
+Hostname: kou-embedded
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
@@ -48,6 +55,7 @@ Video Memory: 64 MB or 128 MB
 #### Audio
 
 ```
+Disable Audio Output (just uncheck the box with **Enable Audio Output**)
 Disable Audio (just uncheck the box with **Enable Audio**)
 ```
 
@@ -118,7 +126,7 @@ Root password: (leave blank)
 Re-enter password to verify: (leave blank)
 Press -> "Continue"
 
-Full name for the new user: Student
+Full name for the new user: student
 Press -> "Continue"
 
 Username for your account: student
@@ -210,15 +218,6 @@ Press -> "Continue"
 Press -> "Continue"
 ```
 
-### Configuring popularity-contest
-
-```
-Participate in the package usage survey?
-(x) No
-( ) Yes
-Press -> "Continue"
-```
-
 ### Install the GRUB boot loader on a hard disk
 
 ```
@@ -238,9 +237,19 @@ Installation complete
 Press -> "Continue"
 ```
 
-# /etc/apt/sources.list
-# If you also want the contrib and non-free components, add contrib non-free
-# after main.
+## Login: Debian GNU/Linux 9 kou-embedded tty1
+
+```
+kou-embedded login: student
+Password: ' ' (space)
+
+student@kou-embedded:~$ _
+```
+
+## /etc/apt/sources.list
+
+If you also want the contrib and non-free components, add contrib non-free
+after main.
 
 ```
 deb http://ftp.de.debian.org/debian/ stretch main contrib non-free
@@ -258,9 +267,11 @@ deb http://ftp.debian.org/debian/ stretch-backports main contrib non-free
 ```
 
 ## ReduceDebian
+
 Reducing the size of the Debian Installation Footprint
 
 It may be useful to reduce the size of the installation footprint on Embedded systems, or on older computers or laptops with limited drive space, or in cases where a small installation is preferred. 
+
 ### To disable apt recommends & suggests:
 
 You can configure apt via apt.conf files.
@@ -284,13 +295,14 @@ sudo apt-config dump | grep Recommends
 ### Reconfigure apt so that it does not install additional packages
 
 ```
-nano /etc/apt/apt.conf.d/10norecommends
+nano /etc/apt/apt.conf.d/01norecommends
 
 APT::Install-Recommends "0";
 APT::Install-Suggests "0";
 ```
 
 ## Update, upgrade & dist-upgrade
+
 ```
 sudo apt update
 sudo apt upgrade
@@ -305,6 +317,7 @@ sudo apt update
 ```
 
 ## Install needed packages:
+
 ```
 sudo apt install xfce4 xfce4-goodies bash-completion
 sudo apt install linux-headers-amd64 linux-headers-`uname -r` firmware-linux
@@ -315,8 +328,16 @@ sudo apt install openocd xterm gksu gtkterm aria2
 sudo apt install default-jre
 ```
 
+## Fonts
+
+```
+sudo apt-get install ttf-mscorefonts-installer ttf-xfree86-nonfree ttf-dejavu xfonts-terminus xfonts-terminus-oblique
+```
+
 ## VirtualBox Guest Additions Installation
+
 Insert Guest Additional CD image...
+
 ```
 #sudo apt-get install build-essential module-assistant dkms
 #sudo apt install virtualbox-guest-dkms virtualbox-guest-x11
@@ -324,9 +345,10 @@ cd /media/cdrom0
 sudo sh autorun.sh
 ```
 
-
 ## /etc/lightdm/lightdm.conf
+
 lightdm greeter autologin & users activation
+
 ```
 ...
 #greeter-hide-users-false
@@ -341,22 +363,50 @@ autologin-user=<USERNAME>
 ```
 
 ## Shared folders
+
 ```
-sudo adduser <USERNAME> vboxsf
-sudo usermod -a -G vboxsf <USERNAME>
+sudo adduser $USER vboxsf
+sudo usermod -a -G vboxsf $USER
 ```
 
 ## GNU MCU Eclipse Plug-ins
+
 ```
 name: GNU MCU Eclipse Plug-ins
 URL: http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/
 ```
 
+### Create Launcher
+
+```
+Name: KOU-Eclipse
+Comment: System programming course IDE
+Command: /home/student/eclipse/eclipse
+...
+Icon: icon.xpm
+...
+Description: System programming course IDE
+...
+[v] Allow this file to run as a program
+```
+
+```
+mkdir ~/Resources
+```
+
+### Add user to dialout group
+
+```
+sudo adduser $USER dialout
+sudo usermod -a -G dialout $USER
+```
+
 ## Look & Feel
+
 ```
 sudo apt install git
 
-sudo apt install gtk2-engines-murrine 
+sudo apt install gtk2-engines-murrine
 
 mkdir ~/.themes
 cd ~/.themes/
