@@ -3,8 +3,8 @@
 *.dsc
 *.build
 *.changes
-*.tar.*
-*.tar
+#*.tar.*
+#*.tar
 *.deb
 *.upload
 #/*/debian/*/*
