@@ -430,6 +430,13 @@ Description: System programming course IDE
 ### Library
 
 ```
+cd ~/Resources/library/
+
+wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/debian/Stellaris_LaunchPad.tar.gz
+
+wget https://raw.githubusercontent.com/KOU-Embedded-System-Lab/os-base-image/master/debian/Tiva_C_LaunchPad.tar.gz
+
+tar -xvzf *.tar.gz
 ```
 
 ### Add user to dialout group
