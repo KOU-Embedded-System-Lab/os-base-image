@@ -1,9 +1,9 @@
 # KOU Embedded VirtualBox image creation
-Ata Niyazov 2018-02-09
+Ata Niyazov 2018-04-11
 
-* [Download **Debian 9**](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.3.0-amd64-netinst.iso)
-* [Download and install **VirtualBox 5.2.6**](https://www.virtualbox.org/wiki/Downloads)
-* [Download and install **VirtualBox 5.2.6 Oracle VM VirtualBox Extension Pack**](https://www.virtualbox.org/wiki/Downloads)
+* [Download **Debian 9**](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.4.0-amd64-netinst.iso)
+* [Download and install **VirtualBox 5.2.8**](https://www.virtualbox.org/wiki/Downloads)
+* [Download and install **VirtualBox 5.2.8 Oracle VM VirtualBox Extension Pack**](https://www.virtualbox.org/wiki/Downloads)
 
 ## Create Virtual Machine
 
@@ -151,7 +151,7 @@ Press -> "Continue"
 How to use this free space: Create a new partition
 Press -> "Continue"
 
-New partition size: 10.7 GB
+New partition size: 8.6 GB
 Press -> "Continue"
 
 Type for the new partition: Primary
@@ -268,6 +268,8 @@ deb http://ftp.debian.org/debian/ stretch-backports main contrib non-free
 
 ## ReduceDebian
 
+Note: This section is optional. *DO NOT* apply this configurations if you do not know what you are doing.
+
 Reducing the size of the Debian Installation Footprint
 
 It may be useful to reduce the size of the installation footprint on Embedded systems, or on older computers or laptops with limited drive space, or in cases where a small installation is preferred. 
@@ -308,7 +310,7 @@ sudo apt update
 sudo apt upgrade
 sudo apt dist-upgrade
 
-systemctl reboot
+sudo reboot
 
 sudo apt autoremove
 sudo apt autoclean
@@ -324,7 +326,7 @@ sudo apt install linux-headers-amd64 linux-headers-`uname -r` firmware-linux
 sudo apt install gcc make gcc-arm-none-eabi gdb-arm-none-eabi
 #sudo apt install libc6:i386 libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
 #sudo apt-get install lib32ncurses5 lib32ncurses5-dev
-sudo apt install openocd xterm gksu gtkterm aria2
+sudo apt install openocd gksu gtkterm
 sudo apt install default-jre
 ```
 
@@ -345,7 +347,22 @@ cd /media/cdrom0
 sudo sh autorun.sh
 ```
 
-## /etc/lightdm/lightdm.conf
+## Configurations
+
+### /etc/default/grub
+
+disable grub boot timeout
+
+```
+...
+#GRUB_TIMEOUT=5
+GRUB_TIMEOUT=0
+...
+
+sudo update-grub
+```
+
+### /etc/lightdm/lightdm.conf
 
 lightdm greeter autologin & users activation
 
@@ -369,8 +386,28 @@ sudo adduser $USER vboxsf
 sudo usermod -a -G vboxsf $USER
 ```
 
-## GNU MCU Eclipse Plug-ins
+## GNU MCU Eclipse
 
+```
+mkdir ~/Resources/
+cd ~/Resources/
+mkdir ~/Resources/library
+mkdir ~/Resources/template
+```
+
+### GNU MCU Eclipse IDE for C/C++ Developers
+
+Link: https://gnu-mcu-eclipse.github.io/downloads/
+
+```
+GNU MCU Eclipse IDE for C/C++ Developers Oxygen.2 20180125
+
+wget https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/download/v4.3.2-20180125-o2/20180125-1917-gnumcueclipse-4.3.2-oxygen-2-linux.gtk.x86_64.tar.gz
+
+tar -xvzf *.tar.gz
+```
+
+### Manual install links:
 ```
 name: GNU MCU Eclipse Plug-ins
 URL: http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/
@@ -381,7 +418,7 @@ URL: http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/
 ```
 Name: KOU-Eclipse
 Comment: System programming course IDE
-Command: /home/student/eclipse/eclipse
+Command: /home/student/Resources/eclipse/eclipse
 ...
 Icon: icon.xpm
 ...
@@ -390,8 +427,9 @@ Description: System programming course IDE
 [v] Allow this file to run as a program
 ```
 
+### Library
+
 ```
-mkdir ~/Resources
 ```
 
 ### Add user to dialout group
@@ -406,27 +444,50 @@ sudo usermod -a -G dialout $USER
 ```
 sudo apt install git
 
-sudo apt install gtk2-engines-murrine
+sudo apt install gtk2-engines-murrine arc-theme
 
 mkdir ~/.themes
 cd ~/.themes/
-git clone https://github.com/LinxGem33/OSX-Arc-White.git
+
+#git clone https://github.com/LinxGem33/OSX-Arc-White.git
+
+wget https://codeload.github.com/LinxGem33/OSX-Arc-White/zip/master
+unzip master
+rm master
+mv ~/.themes/OSX-Arc-White-master/ ~/.themes/OSX-Arc-White/
 
 mkdir ~/.icons
 cd ~/.icons/
-git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
-git clone https://github.com/keeferrourke/capitaine-cursors.git
-mv ~/.icons/capitaine-cursors/dist/cursors/ ~/.icons/la-capitaine-icon-theme/
-rm -rf ~/.icons/capitaine-cursors/
-gtk-update-icon-cache ~/.icons/la-capitaine-icon-theme/
+
+#git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
+
+wget https://codeload.github.com/keeferrourke/la-capitaine-icon-theme/zip/master
+unzip master
+rm master
+mv ~/.icons/la-capitaine-icon-theme-master/ ~/.icons/La\ Capitaine/
+
+#git clone https://github.com/keeferrourke/capitaine-cursors.git
+
+wget https://codeload.github.com/keeferrourke/capitaine-cursors/zip/master
+unzip master
+rm master
+mv ~/.icons/capitaine-cursors-master/dist/cursors/ ~/.icons/La\ Capitaine/
+rm -rf ~/.icons/capitaine-cursors-master/
+gtk-update-icon-cache ~/.icons/La\ Capitaine/
 
 cd /usr/share/themes/
 sudo ln -s ~/.themes/OSX-Arc-White/ .
 
 cd /usr/share/icons/
-sudo ln -s ~/.icons/la-capitaine-icon-theme/ .
+sudo ln -s ~/.icons/La\ Capitaine/ .
 
 sudo apt install lightdm-gtk-greeter-settings
+```
+
+## Remove list
+
+```
+sudo apt remove --auto-remove --purge
 ```
 
 ## TO-DO:
@@ -439,3 +500,5 @@ sudo apt install lightdm-gtk-greeter-settings
 7. add whisker menu as main menu
 8. change settings for power manager
 9. change settings for session and startup
+10. disable grub timeout
+
