@@ -497,6 +497,24 @@ sudo apt install lightdm-gtk-greeter-settings
 sudo apt remove --auto-remove --purge
 ```
 
+## Export Virtual Appliance
+
+```
+Name:		debian-kou-embedded-v$(date -I)
+Product:	debian-kou-embedded
+Product-URL:	http://embedded.kocaeli.edu.tr/
+Version:	v$(date -I)
+Description:
+debian-kou-embedded-v$(date -I)
+
+Username: student
+Password: ' ' (space)
+Hostname: kou-embedded
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+
 ## TO-DO:
 1. change theme
 2. change icon theme
